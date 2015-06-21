@@ -1,6 +1,0 @@
-[submodule "hi"]
-	path = hi
-	url = git@github.com:kashiro/hi.git
-[submodule "resume"]
-	path = resume
-	url = git@github.com:kashiro/resume.git
