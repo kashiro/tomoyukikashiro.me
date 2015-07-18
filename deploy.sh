@@ -1,6 +1,6 @@
 #!/bin/sh
 
-$BASE_DIR=`cwd`
+BASE_DIR=`pwd`
 rm -rf dist
 git clone -b gh-pages git@github.com:kashiro/tomoyukikashiro.me.git dist
 
@@ -19,7 +19,6 @@ cp -rf hi/* dist/
 ####################
 cd resume
 npm install
-npm install -g grunt-cli
 bower install
 grunt build
 cp -rf dist/* ${BASE_DIR}/dist
