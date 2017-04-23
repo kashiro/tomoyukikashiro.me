@@ -1,24 +1,25 @@
 #!/bin/sh
 
-BASE_DIR=`pwd`
-rm -rf dist
-git clone -b gh-pages git@github.com:kashiro/tomoyukikashiro.me.git dist
-
-####################
-# sample
-####################
-cp -rf sample/* dist/
-
 ####################
 # hi
 ####################
-cp -rf hi/* dist/
+cd hi
+git pull origin master
+cd -
+cp hi/* ./
 
 ####################
 # resume
 ####################
 cd resume
+git pull origin master
 npm install
 bower install
 grunt build
-cp -rf dist/* ${BASE_DIR}/dist
+cd -
+cp -rf resume/dist/* ./
+
+####################
+# push
+####################
+git commit -am 'update'; git push origin master -f
