@@ -3,23 +3,24 @@
 ####################
 # hi
 ####################
-cd hi
+cd _hi
 git pull origin master
 cd -
-cp hi/* ./
+cp ./hi/* ./
 
 ####################
 # resume
 ####################
-cd resume
+cd _resume
 git pull origin master
 npm install
 bower install
 grunt build
 cd -
-cp -rf resume/dist/* ./
+cp -rf ./_resume/dist/* ./resume/
 
 ####################
 # push
 ####################
-git commit -am 'update'; git push origin master -f
+git add .
+git commit -m 'update'; git push origin master -f
