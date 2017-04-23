@@ -6,7 +6,7 @@
 cd _hi
 git pull origin master
 cd -
-cp ./hi/* ./
+cp ./_hi/* ./
 
 ####################
 # resume
