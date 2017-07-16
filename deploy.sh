@@ -14,8 +14,7 @@ cp ./_hi/* ./
 cd _resume
 git pull origin master
 npm install
-bower install
-grunt build
+npm run build
 cd -
 cp -rf ./_resume/dist/* ./resume/
 
