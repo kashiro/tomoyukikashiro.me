@@ -9,16 +9,6 @@ cd -
 cp ./_hi/* ./
 
 ####################
-# resume
-####################
-cd _resume
-git pull origin master
-npm install
-npm run build
-cd -
-cp -rf ./_resume/dist/* ./resume/
-
-####################
 # push
 ####################
 git add .
